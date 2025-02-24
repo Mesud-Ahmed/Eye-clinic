@@ -4,6 +4,9 @@ import ServicesCard from "./ServicesCard";
 import { MdHealthAndSafety } from "react-icons/md";
 import { FaHeartbeat } from "react-icons/fa";
 
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
+
 const Services = () => {
     const icon1 = (
         <RiMicroscopeLine size={35} className=" text-backgroundColor" />
@@ -12,6 +15,7 @@ const Services = () => {
         <MdHealthAndSafety size={35} className=" text-backgroundColor" />
     );
     const icon3 = <FaHeartbeat size={35} className=" text-backgroundColor" />;
+    const { ref, inView } = useInView({ triggerOnce: true });
 
     return (
         <div className=" min-h-screen flex flex-col justify-center lg:px-32 px-5 pt-24 lg:pt-16">
@@ -20,6 +24,7 @@ const Services = () => {
                     <h1 className=" text-4xl font-semibold text-center lg:text-start">
                         Our Services
                     </h1>
+
                     <p className=" mt-2 text-center lg:text-start">
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus,
                         quidem.
@@ -34,6 +39,7 @@ const Services = () => {
                 <ServicesCard icon={icon2} title="Health Check" />
                 <ServicesCard icon={icon3} title="Heart Health" />
             </div>
+            
         </div>
     );
 };
