@@ -33,6 +33,8 @@ const Doctors = () => {
         infinite: true,
         speed: 500,
         arrows: false,
+        autoplay: true, 
+        autoplaySpeed: 3000,
         slidesToShow: 3,
         slidesToScroll: 1,
         responsive: [
@@ -95,7 +97,7 @@ const Doctors = () => {
                 <Slider ref={slider} {...settings}>
                     {data.map((doctor, index) => (
                         <div
-                            className="h-[400px] text-black rounded-xl shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] mb-2 px-3 cursor-pointer"
+                            className="h-[400px] text-black rounded-xl shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] mb-2 px-2 cursor-pointer"
                             key={index}
                         >
                             <div>
