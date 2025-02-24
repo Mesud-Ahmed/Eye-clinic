@@ -35,7 +35,7 @@ const About = () => {
                 </p>
                 <div className="text-justify lg:text-start grid  md:grid-cols-2 ">
                     <div ref={ref} className="text-center p-7 bg-purple-300 rounded-md m-1">
-                        {inView && <CountUp className="font-bold text-4xl " start={90} end={1000} duration={4} suffix="+" />}
+                        {inView && <CountUp className="font-bold text-4xl " start={90} end={1000} duration={3} suffix="+" />}
                         <h2 className="text-2xl ">Happy Customers</h2>
                     </div>
                     <div ref={ref} className="text-center p-7 bg-pink-300 rounded-md m-1">

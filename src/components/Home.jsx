@@ -3,19 +3,21 @@ import Button from "./Button";
 
 const Home = () => {
     return (
-        <div className=" min-h-screen flex flex-col justify-center lg:px-32 px-5 text-white bg-[url('assets/home.png')] bg-no-repeat bg-cover opacity-90">
-            <div className=" w-full lg:w-4/5 space-y-5 mt-10">
-                <h1 className="text-5xl font-bold leading-tight">
-                    Empowering Health Choices for a Vibrant Life Your Trusted..
-                </h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam magnam
-                    omnis natus accusantium quos. Reprehenderit incidunt expedita
-                    molestiae impedit at sequi dolorem iste sit culpa, optio voluptates
-                    fugiat vero consequatur?
-                </p>
+        <div className="relative min-h-screen flex flex-col justify-center items-start px-5 lg:px-32 text-white bg-[url('assets/heroImg.jpg')] bg-no-repeat bg-cover">
+            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-                <Button title="See Services" />
+            <div className="relative w-full lg:w-3/5 space-y-6 text-center lg:text-left">
+                <h1 className="text-5xl lg:text-6xl font-extrabold leading-tight bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-transparent">
+                    Clear Vision, Brighter Future
+                </h1>
+                <p className="text-xl text-gray-200 leading-relaxed font-medium">
+                    Your trusted eye care partner, delivering expert solutions to enhance your vision 
+                    and improve your quality of life.
+                </p>
+                
+                <div className="mt-6">
+                    <Button title="See Services" />
+                </div>
             </div>
         </div>
     );
