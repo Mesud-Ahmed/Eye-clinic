@@ -13,7 +13,8 @@ export default function Testimonials() {
         <motion.div
             className="max-w-4xl mx-auto my-10 p-6 rounded-lg"
             initial={{ opacity: 0, y: 100 }} 
-            animate={{ opacity: 1, y: 0 }} 
+            viewport={{  amount: 0.3 }} 
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 2, ease: "easeOut" }} 
         >
             <h2 className="text-2xl font-bold text-center mb-6">What Our Customers Say</h2>

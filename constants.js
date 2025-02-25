@@ -91,7 +91,7 @@ export const eyeClinicServices = [
       icon: FaEye 
     },
     { 
-      name: "Prescription Glasses & Contact Lenses", 
+      name: "Prescription Glasses ", 
       description: "Vision correction services, including fitting and prescribing glasses or contact lenses.",
       icon: FaGlasses 
     },
@@ -120,11 +120,7 @@ export const eyeClinicServices = [
       description: "Managing conditions like macular degeneration and retinal detachment.",
       icon: FaUserMd 
     },
-    { 
-      name: "LASIK & Refractive Surgery Consultations", 
-      description: "Evaluating eligibility for laser eye surgery to correct vision problems.",
-      icon: GiLaserWarning 
-    },
+    
     { 
       name: "Pediatric Eye Care", 
       description: "Eye exams and treatment for children’s vision issues, such as lazy eye or strabismus.",

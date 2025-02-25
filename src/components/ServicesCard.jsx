@@ -17,7 +17,8 @@ const ServicesCard = ({ Icon, name, description, index }) => {
         <motion.div
             variants={cardVariants}
             initial="hidden"
-            animate="show"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
             custom={index} 
             className="group flex flex-col items-center text-center gap-3 p-5 shadow-lg rounded-lg cursor-pointer 
                  hover:shadow-xl transition duration-300 ease-in-out"

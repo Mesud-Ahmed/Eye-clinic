@@ -10,13 +10,13 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 
 const containerVariants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.5, 
+    hidden: { opacity: 0 },
+    show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.5,
+        },
     },
-  },
 };
 
 const Services = () => {
@@ -47,7 +47,8 @@ const Services = () => {
             <motion.div
                 variants={containerVariants}
                 initial="hidden"
-                animate="show"
+                whileInView="show" 
+                viewport={{ once: true, amount: 0.1 }} 
                 className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-10 lg:px-20"
             >
                 {eyeClinicServices.map((service, index) => (
@@ -56,7 +57,7 @@ const Services = () => {
                         name={service.name}
                         Icon={service.icon}
                         description={service.description}
-                        index={index} 
+                        index={index}
                     />
                 ))}
             </motion.div>

@@ -24,7 +24,8 @@ const About = () => {
                 <motion.h1
                     className="text-4xl font-semibold text-center lg:text-start"
                     initial={{ opacity: 0, x: 100 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }} 
+                    whileInView={{ opacity: 1, x: 0 }} 
                     transition={{ duration: 2, ease: "easeOut" }}
                 >
                     Short Story About Us
@@ -33,7 +34,8 @@ const About = () => {
                 <motion.p
                     className="text-justify lg:text-start"
                     initial={{ opacity: 0, x: 100 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    whileInView={{ opacity: 1, x: 0 }} 
+                    viewport={{ once: true, amount: 0.1 }} 
                     transition={{ duration: 2, ease: "easeOut" }}
                 >
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam
@@ -45,7 +47,8 @@ const About = () => {
                 <motion.p
                     className="text-justify lg:text-start"
                     initial={{ opacity: 0, x: 100 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    whileInView={{ opacity: 1, x: 0 }} 
+                    viewport={{ once: true, amount: 0.1 }} 
                     transition={{ duration: 2, ease: "easeOut"}}
                 >
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora quia
