@@ -3,7 +3,7 @@ import { RiMicroscopeLine } from "react-icons/ri";
 import ServicesCard from "./ServicesCard";
 import { MdHealthAndSafety } from "react-icons/md";
 import { FaHeartbeat } from "react-icons/fa";
-
+import { eyeClinicServices } from "../../constants";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
@@ -19,9 +19,9 @@ const Services = () => {
 
     return (
         <div className=" min-h-screen flex flex-col justify-center lg:px-32 px-5 pt-24 lg:pt-16">
-            <div className=" flex flex-col items-center lg:flex-row justify-between">
-                <div>
-                    <h1 className=" text-4xl font-semibold text-center lg:text-start">
+            <div className=" flex flex-col items-center lg:flex-row justify-center">
+                <div >
+                    <h1 className=" text-4xl font-semibold text-center ">
                         Our Services
                     </h1>
 
@@ -30,16 +30,15 @@ const Services = () => {
                         quidem.
                     </p>
                 </div>
-                <div className=" mt-4 lg:mt-0">
-                    <Button title="See Services" />
-                </div>
+                
             </div>
-            <div className=" flex flex-col lg:flex-row gap-5 pt-14">
-                <ServicesCard icon={icon1} title="Lab Test" />
-                <ServicesCard icon={icon2} title="Health Check" />
-                <ServicesCard icon={icon3} title="Heart Health" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-10 lg:px-20">
+                {eyeClinicServices.map((service) => (
+                    <ServicesCard key={service.name} name={service.name} Icon={service.icon} description={service.description} />
+                ))}
             </div>
-            
+
+
         </div>
     );
 };

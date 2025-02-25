@@ -2,6 +2,7 @@ import React from "react";
 import coverImg from "../assets/cover.jpg";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const About = () => {
     const { ref, inView } = useInView({ triggerOnce: true });
@@ -20,19 +21,39 @@ const About = () => {
 
             </div>
             <div className=" w-full lg:w-3/4 space-y-4">
-                <h1 className=" text-4xl font-semibold text-center lg:text-start">Short Story About Us</h1>
-                <p className=" text-justify lg:text-start">
+                <motion.h1
+                    className="text-4xl font-semibold text-center lg:text-start"
+                    initial={{ opacity: 0, x: 100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 2, ease: "easeOut" }}
+                >
+                    Short Story About Us
+                </motion.h1>
+
+                <motion.p
+                    className="text-justify lg:text-start"
+                    initial={{ opacity: 0, x: 100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 2, ease: "easeOut" }}
+                >
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam
                     labore rerum tempore tenetur commodi natus quos itaque voluptatum
                     repudiandae nostrum accusantium vero voluptate aspernatur totam,
                     laboriosam aut, et quae consequatur?
-                </p>
-                <p className="text-justify lg:text-start">
+                </motion.p>
+
+                <motion.p
+                    className="text-justify lg:text-start"
+                    initial={{ opacity: 0, x: 100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 2, ease: "easeOut"}}
+                >
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora quia
                     suscipit illum, numquam incidunt nostrum dolor officia doloremque
                     cupiditate, placeat explicabo sed iure atque neque quidem ipsam!
                     Dolor, minus reiciendis.
-                </p>
+                </motion.p>
+
                 <div className="text-justify lg:text-start grid  md:grid-cols-2 ">
                     <div ref={ref} className="text-center p-7 bg-purple-300 rounded-md m-1">
                         {inView && <CountUp className="font-bold text-4xl " start={90} end={1000} duration={3} suffix="+" />}

@@ -19,10 +19,10 @@ const Navbar = () => {
     return (
         <div className=" fixed w-full z-10 text-white">
             <div>
-                <div className=" flex flex-row justify-between p-5 md:px-32 px-5 bg-backgroundColor shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
-                    <div className="flex flex-row items-center cursor-pointer">
+                <div className=" flex flex-row justify-between p-4 md:px-32 px-5 bg-backgroundColor shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
+                    <div className="hidden lg:flex flex-row items-center cursor-pointer ">
                         <Link to="home" spy={true} smooth={true} duration={500}>
-                            <img className='rounded-full w-[90px] ' src={logo}/>
+                            <img className='rounded-full w-[70px] ' src={logo} />
                         </Link>
                     </div>
 
@@ -67,9 +67,9 @@ const Navbar = () => {
 
                     </nav>
 
-                    <div className=" hidden lg:flex">
-                        <a href="tel:+1234567890" className="bg-brightColor text-white px-4 py-2 rounded-md hover:bg-hoverColor transition duration-300 ease-in-out flex items-center gap-2">
-                            <span className="inline">Call Us</span> <AiFillPhone size={30} color='blue' />
+                    <div className=" hidden lg:flex mt-4">
+                        <a href="tel:+1234567890" className="bg-yellow-600 text-white px-4 py-2 rounded-md hover:bg-hoverColor transition duration-300 ease-in-out flex items-center gap-2">
+                            <span className="inline " >Call Us</span> <AiFillPhone size={30} color='blue' />
                         </a>
                     </div>
 
@@ -130,7 +130,7 @@ const Navbar = () => {
 
 
                     <div className=" lg:hidden">
-                        <a href="tel:+1234567890" className="bg-brightColor text-white px-4 py-2 rounded-md hover:bg-hoverColor transition duration-300 ease-in-out flex items-center gap-2 w-[180px] mx-auto">
+                        <a href="tel:+1234567890" className="bg-yellow-700 text-white px-4 py-2 rounded-md hover:bg-hoverColor transition duration-300 ease-in-out flex items-center gap-2 w-[180px] mx-auto">
                             <span className="inline">Call Us</span> <AiFillPhone size={30} color='blue' />
                         </a>
 
