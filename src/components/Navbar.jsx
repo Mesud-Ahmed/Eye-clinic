@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-scroll";
 import logo from '../assets/logo.png';
 import { AiOutlineClose, AiOutlineMenu, AiFillPhone } from "react-icons/ai";
-
+import { motion } from "framer-motion";
 
 const Navbar = () => {
     const [menu, setMenu] = useState(false);
@@ -19,7 +19,7 @@ const Navbar = () => {
     return (
         <div className=" fixed w-full z-10 text-white">
             <div>
-                <div className=" flex flex-row justify-between p-4 md:px-32 px-5 bg-backgroundColor shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
+                <div className=" flex flex-row justify-between p-4 md:px-32 px-5 bg-[#578FCA] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
                     <div className="hidden lg:flex flex-row items-center cursor-pointer ">
                         <Link to="home" spy={true} smooth={true} duration={500}>
                             <img className='rounded-full w-[70px] ' src={logo} />
@@ -68,9 +68,13 @@ const Navbar = () => {
                     </nav>
 
                     <div className=" hidden lg:flex mt-4">
-                        <a href="tel:+1234567890" className="bg-yellow-600 text-white px-4 py-2 rounded-md hover:bg-hoverColor transition duration-300 ease-in-out flex items-center gap-2">
-                            <span className="inline " >Call Us</span> <AiFillPhone size={30} color='blue' />
-                        </a>
+                        <motion.a
+                            className="bg-white text-blue-600 font-bold px-4 py-2  rounded-full shadow-lg transition hover:bg-gray-200 focus:outline-none whitespace-nowrap cursor-pointer"
+                            animate={{ scale: [1, 1.1, 1] }}
+                            transition={{ repeat: Infinity, duration: 1, ease: "easeInOut" }}
+                        >
+                            📞 Call Us
+                        </motion.a>
                     </div>
 
 
@@ -130,9 +134,13 @@ const Navbar = () => {
 
 
                     <div className=" lg:hidden">
-                        <a href="tel:+1234567890" className="bg-yellow-700 text-white px-4 py-2 rounded-md hover:bg-hoverColor transition duration-300 ease-in-out flex items-center gap-2 w-[180px] mx-auto">
-                            <span className="inline">Call Us</span> <AiFillPhone size={30} color='blue' />
-                        </a>
+                        <motion.a
+                            className="bg-white text-blue-600 font-bold px-4 py-2  rounded-full shadow-lg transition hover:bg-gray-200 focus:outline-none whitespace-nowrap cursor-pointer"
+                            animate={{ scale: [1, 1.1, 1] }}
+                            transition={{ repeat: Infinity, duration: 1, ease: "easeInOut" }}
+                        >
+                            📞 Call Us
+                        </motion.a>
 
                     </div>
                 </div>

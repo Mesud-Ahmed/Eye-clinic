@@ -11,7 +11,7 @@ export default function Testimonials() {
     const slider = useRef(null);
     return (
         <motion.div
-            className="max-w-4xl mx-auto my-10 p-6 rounded-lg"
+            className="max-w-4xl mx-auto my-10 p-6 rounded-lg "
             initial={{ opacity: 0, y: 100 }} 
             viewport={{  amount: 0.3 }} 
             whileInView={{ opacity: 1, x: 0 }}
@@ -32,7 +32,7 @@ export default function Testimonials() {
                     <FaArrowRight size={25} />
                 </button>
             </div>
-            <div className="mt-5">
+            <div className="mt-5  mb-5">
                 <Slider ref={slider} {...settings}>
                     {reviews.map((review) => (
                         <a

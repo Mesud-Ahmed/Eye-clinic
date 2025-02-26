@@ -24,7 +24,10 @@ function App() {
         <div id="doctors">
           <Doctors />
         </div>
-        <Testimonials/>
+        <div className="bg-[#E8F9FF]">
+          <Testimonials/>
+        </div>
+        
       </main>
       <Footer />
     </>

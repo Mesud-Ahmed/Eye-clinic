@@ -11,6 +11,9 @@ export default {
         brightColor: "#dd8036",
         backgroundColor: "#36ae9a",
       },
+      fontFamily: {
+        anek: ["Anek Devanagari", "sans-serif"],
+      },
     },
   },
   plugins: [],

@@ -18,15 +18,14 @@ const Doctors = () => {
 
 
     return (
-        <div className=" min-h-screen flex flex-col justify-center lg:px-32 px-5 pt-16">
+        <div className=" min-h-screen flex flex-col justify-center lg:px-32 px-5 pt-16 bg-[#E8F9FF]">
             <div className=" flex flex-col items-center lg:flex-row justify-center mb-10 lg:mb-0">
                 <div className="">
                     <h1 className=" text-4xl font-semibold text-center l">
                         Our Doctors
                     </h1>
                     <p className=" mt-2 text-center ">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus,
-                        quidem.
+                    Our team of skilled ophthalmologists and optometrists
                     </p>
                 </div>
 

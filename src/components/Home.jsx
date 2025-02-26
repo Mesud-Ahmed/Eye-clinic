@@ -4,7 +4,7 @@ import Button from "./Button";
 
 const Home = () => {
     return (
-        <div className="relative min-h-screen flex flex-col justify-center items-start px-5 lg:px-32 text-white bg-[url('assets/heroImg.jpg')] bg-no-repeat bg-cover">
+        <div className="relative min-h-screen flex flex-col justify-center items-start px-5 lg:px-32 text-white bg-[url('assets/heroImg.jpg')] bg-no-repeat bg-cover bg-center md:bg-top">
            
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
